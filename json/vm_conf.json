@@ -1,0 +1,8 @@
+{
+    "ram":128,
+    "disk_size":1024,
+    "cdrom":"[datastore1]/test/Core-5.4.iso",
+    "cpu":1,
+    "vm_name":"new_vm"
+
+}

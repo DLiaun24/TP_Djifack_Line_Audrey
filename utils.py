@@ -1,7 +1,7 @@
-import paramiko
-import json
-from pyVim.connect import SmartConnect
-from pyVmomi import vim
+import paramiko # Etablish SSh connection
+import json 
+from pyVim.connect import SmartConnect #Ease the conection to a server
+from pyVmomi import vim #import class to interact with vSphere API
 import re
 
 
@@ -103,9 +103,9 @@ def get_vm(content, vm_name = None):
     """
     if vm_name is None:
         vm_name = "ouups" #Default name if none is provided
-    container = content.rootFolder #Get the root folder of the VM
+    container = content.rootFolder #Get the root folder of the VM entities
     view_type = [vim.VirtualMachine] #Specify the view type for VMs
-    recursive = True # ENable recursion to find VMs in subfolders
+    recursive = True # Enable recursion to find VMs in subfolders
 
     #Create a container view for VMs in the root folder
     container_view = content.viewManager.CreateContainerView(
